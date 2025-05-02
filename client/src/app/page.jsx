@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, BarChart3, Brain, CheckCircle, HeartPulse, Shield, Users } from "lucide-react"
-import {SignInButton,IsSignedIn,IsSignedOut,UserButton} from '@clerk/nextjs'
+import {SignInButton,SignedIn,SignedOut,UserButton} from '@clerk/nextjs'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
@@ -29,14 +29,14 @@ const  LandingPage = () => {
             </Link>
           </nav>
           <div className="flex items-center gap-4">
-            <IsSignedIn><UserButton/></IsSignedIn>
-            <IsSignedOut>
+            <SignedIn><UserButton/></SignedIn>
+            <SignedOut>
               <SignInButton>
                 <Button variant="outline" size="sm" className="hidden md:flex">
                   Log In
                 </Button>            
               </SignInButton>
-            </IsSignedOut>
+            </SignedOut>
           </div>
         </div>
       </header>
